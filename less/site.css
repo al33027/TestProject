@@ -1,0 +1,55 @@
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: block;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3 {
+  color: #000000;
+}
+.top-banner {
+  background-color: #000000;
+  min-height: 100vh;
+  display: block;
+}
+.service-options .container {
+  max-width: 85vw;
+}
+.service-options .container .p1-text {
+  background-color: #0c0011;
+}
+.service-options .container .p1-text h1 {
+  text-transform: capitalize;
+  font-weight: 500px;
+  color: #ffffff;
+}
+.service-options .container .p1-text p {
+  color: #ffffff;
+  font-weight: 100;
+}
+.portfolio-mix button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.portfolio-mix ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 65px;
+}
+.portfolio-mix ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.portfolio-mix ul li a {
+  color: #000000;
+}
+.portfolio-mix ul li a:hover {
+  text-decoration: none;
+}
