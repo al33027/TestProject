@@ -53,3 +53,11 @@ h3 {
 .portfolio-mix ul li a:hover {
   text-decoration: none;
 }
+.tile {
+  min-width: 267px;
+  height: 267px;
+  background-color: #cccccc;
+}
+.tile:hover {
+  background-color: #555555;
+}

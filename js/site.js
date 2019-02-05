@@ -1,21 +1,13 @@
 //mix-mosaic
 
-let tile = 12;
+let boxTiles = document.getElementById('box-tiles');
 
-function mosaicTile(boxTiles){
-    let tileContainer = document.createElement("div");
-    let text = "Hello World";
-    let blockDiv, textSpan;
+function tileBox(){
 
-    div.className = "p-3 flex-md-grow-1 flex-fill align-content-stretch bd-highlight text-left p1-text";
-    document.getElementById(boxTiles.replace("#", "")).appendChild(tileContainer);
-
-    for(let i = 0; i < tile; i++){
-        blockDiv = document.createElement("div");
-        blockDiv.className = "block";
-        textSpan = document.createElement("span");
-        textSpan.append(text);
-        blockDiv.append(textSpan);
-        tileContainer.append(blockDiv);
-    }
+    //Create Tiles
+    for ( let i = 0; i < 18; i++ ){
+        boxTiles.innerHTML += '<a href="#"><div' + + 'class="p-3 bd-highlight tile">' + + '</div></a>';
+    };
 }
+
+window.onload = tileBox();
