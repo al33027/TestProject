@@ -61,3 +61,14 @@ h3 {
 .tile:hover {
   background-color: #555555;
 }
+.bannerMid {
+  width: 100%;
+  background-color: #ccc;
+  display: block;
+  position: relative;
+  padding: 125px 0;
+}
+.bannerMid h1 {
+  margin: 0;
+  padding: 0;
+}
