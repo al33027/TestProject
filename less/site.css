@@ -26,7 +26,8 @@ nav button {
   cursor: pointer;
   position: relative;
   width: 35px;
-  height: 30px;
+  height: 45px;
+  z-index: 1;
 }
 nav button:focus {
   outline: none;
@@ -60,6 +61,20 @@ nav button .bar:before {
 }
 nav button .bar:after {
   top: 10px;
+}
+nav .menu-table {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -500px;
+  z-index: 0;
+  background-color: #eee;
+  width: 15vw;
+  height: 100vh;
+  transition: .3s;
+}
+.menu-table.open {
+  left: 0;
 }
 #menu-button.active .bar {
   background: rgba(0, 0, 0, 0);

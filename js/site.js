@@ -21,10 +21,10 @@ function tileBox(){
 window.onload = tileBox();
 
 $(document).ready(function(){
-    $('#menu-button').click(function () {
-        $('#menu-button').toggleClass('active');
-    });
-    if(('').hasClass('')){
 
-    }
+    $('#menu-button').click(function (event) {
+        $('#menu-button').toggleClass('active');
+        $('#menu-list').toggleClass('open');
+        event.stopPropagation();
+    });
 });
