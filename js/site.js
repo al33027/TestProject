@@ -19,3 +19,12 @@ function tileBox(){
 }
 
 window.onload = tileBox();
+
+$(document).ready(function(){
+    $('#menu-button').click(function () {
+        $('#menu-button').toggleClass('active');
+    });
+    if(('').hasClass('')){
+
+    }
+});

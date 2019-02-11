@@ -1,3 +1,7 @@
+*{    
+    outline: none;
+}
+
 html,body{
     min-height: 100vh;
     width: 100%;
@@ -15,21 +19,91 @@ h1, h2, h3 {
     display: block;
 }
 
-.service-options .container {
-    max-width: 85vw;;
+nav button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    padding-top: 10px;
+    cursor: pointer;
+    position: relative;
+    width: 35px;
+    height: 30px;
 }
 
-.service-options .container .p1-text {
-    background-color: #0c0011;
+nav button:focus {
+    outline: none;
 }
 
-.service-options .container .p1-text h1 {
+nav button .bar {
+    position: absolute;
+    border: none;
+    background-color: #555;
+    height: 5px;
+    width: 35px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    left: 0;
+    right: 0;
+    transition: .3s;
+}
+
+nav button .bar:before,
+nav button .bar:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 35px;
+    background-color: #555;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+    transition: .3s;
+}
+
+nav button .bar:before {
+    top: -10px;
+}
+nav button .bar:after {
+    top: 10px;
+}
+
+#menu-button.active .bar {
+    background: rgba(0,0,0,0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0);
+}
+
+#menu-button.active .bar:before {
+    top: 0;
+    transform: rotate(45deg)
+}
+
+#menu-button.active .bar:after {
+    top: 0;
+    transform: rotate(135deg)
+}
+
+nav .logo-icon {
+    display: inline-block;
+    color: #555;
+    font-size: 30px;
+    text-align: right;
+}
+
+.service-options .container-fluid {
+    max-width: 85vw;
+}
+
+.service-options .p1-text {
+    background-color: #000;
+}
+
+.service-options .p1-text h1 {
     text-transform: capitalize;
     font-weight: 500px;
     color: #ffffff;
 }
 
-.service-options .container .p1-text p {
+.service-options .p1-text p {
     color: #ffffff;
     font-weight: 100;
 }
@@ -83,4 +157,40 @@ padding: 125px 0;
 .bannerMid h1{
     margin: 0;
     padding: 0;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer .container-fluid {
+    max-width: 85vw;
+}
+
+footer .container-fluid p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+footer .social h6 {
+    color: #555;
+}
+
+footer .social {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+}
+
+footer .social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+}
+
+footer .social ul li a {
+    width: 15px;
+    height: 15px;
+    color: #555;
 }
