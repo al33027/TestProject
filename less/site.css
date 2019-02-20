@@ -1,8 +1,8 @@
 * {
   outline: none;
 }
-html,
-body {
+body,
+html {
   min-height: 100vh;
   width: 100%;
   display: block;
@@ -42,11 +42,11 @@ nav button .bar {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   left: 0;
   right: 0;
-  transition: .3s;
+  transition: 0.3s;
 }
-nav button .bar:before,
-nav button .bar:after {
-  content: '';
+nav button .bar:after,
+nav button .bar:before {
+  content: "";
   position: absolute;
   display: block;
   height: 5px;
@@ -54,7 +54,7 @@ nav button .bar:after {
   background-color: #555;
   margin-bottom: 5px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  transition: .3s;
+  transition: 0.3s;
 }
 nav button .bar:before {
   top: -10px;
@@ -66,12 +66,15 @@ nav .menu-table {
   display: block;
   position: absolute;
   top: 0;
-  left: -500px;
+  left: -1500px;
   z-index: 0;
   background-color: #eee;
-  width: 15vw;
+  width: 60vw;
+  max-width: 50vw;
   height: 100vh;
-  transition: .3s;
+  transition: 0.3s;
+  -webkit-clip-path: polygon(0 0, 35% 0, 80% 100%, 0% 100%);
+  clip-path: polygon(0 0, 35% 0, 80% 100%, 0% 100%);
 }
 .menu-table.open {
   left: 0;
@@ -109,28 +112,48 @@ nav .logo-icon {
   color: #ffffff;
   font-weight: 100;
 }
+.portfolio-mix h1 {
+  margin: 0;
+  padding: 0;
+}
 .portfolio-mix button {
+  display: inline-block;
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-.portfolio-mix ul {
-  list-style: none;
-  margin: 0;
   padding: 0;
-  position: absolute;
-  right: 65px;
+  width: auto;
+  height: auto;
+  float: right;
 }
-.portfolio-mix ul li {
+.portfolio-mix .filter-nav {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+}
+.portfolio-mix .menu-list {
   display: inline-block;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  overflow: hidden;
+  right: 0;
 }
-.portfolio-mix ul li a {
-  color: #000000;
+.portfolio-mix .menu-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.portfolio-mix ul li a:hover {
-  text-decoration: none;
+.portfolio-mix .menu-list ul li {
+  display: inline-block;
+  float: right;
+  padding: 0 15px;
+  border-right: thin solid #000;
+}
+.portfolio-mix .menu-list ul li:first-child {
+  border-right: none;
 }
 .tile {
   min-width: 267px;
@@ -167,8 +190,8 @@ footer .social h6 {
 }
 footer .social {
   position: fixed;
-  bottom: 25px;
-  right: 30px;
+  bottom: 105px;
+  right: 1.5%;
 }
 footer .social ul {
   list-style: none;
