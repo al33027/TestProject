@@ -24,16 +24,28 @@
 
   <body>
     <!--[if lt IE 7]> <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p> <![endif]-->
+    <div class="login-screen" id="login">
+      
+    </div>
     <header>
       <nav class="fixed-top clearfix pl-4 pr-4 pt-2">
-        <button type="button" id="menu-button">
+        <div class="hamburger" id="menu-button">
           <span id="bar-menu" class="bar"></span>
-        </button>
+        </div>
         <div class="menu-table" id="menu-list">
           &nbsp;
         </div>
-        <div class="logo-icon float-right">
-          <i class="fab fa-wordpress"></i>
+        <div class="login float-right">
+          <ul>
+            <li>
+              <a href="/">
+                <i class="fab fa-wordpress"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-sign-in-alt"></i></a>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -70,15 +82,25 @@
                   <nav class="filter-nav">
                     <div class="menu-list">
                       <ul>
-                        <li><a href="#">All</a></li>
-                        <li><a href="#">Website</a></li>
-                        <li><a href="#">Brand</a></li>
-                        <li><a href="#">Logos</a></li>
-                        <li><a href="#">UI/UX</a></li>
+                        <li>
+                          <a href="#">All</a>
+                        </li>
+                        <li>
+                          <a href="#">Website</a>
+                        </li>
+                        <li>
+                          <a href="#">Brand</a>
+                        </li>
+                        <li>
+                          <a href="#">Logos</a>
+                        </li>
+                        <li>
+                          <a href="#">UI/UX</a>
+                        </li>
                       </ul>
                     </div>
                     <button id="filter-trigger" type="button">
-                        <i class="fas fa-filter"></i>
+                      <i class="fas fa-filter"></i>
                     </button>
                   </nav>
                 </div>
@@ -186,8 +208,8 @@
       </div>
     </main>
 
-    <footer class="pt-3 pb-3">
-      <div class="container-fluid pt-3 pb-3">
+    <footer class="pt-2 pb-2">
+      <div class="container-fluid pt-2 pb-2">
         <p>&copy; Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
       </div>
       <div class="social">

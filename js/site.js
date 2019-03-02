@@ -1,30 +1,33 @@
 //mix-mosaic
 
-let boxTiles = document.getElementById('box-tiles'),
-tileImage = document.getElementById('tile-image');
+function tileBox() {
+  let boxTiles = document.getElementById("box-tiles"),
+    tileImage = document.getElementById("tile-image");
 
-
-function tileBox(){
-
-    //Create Tiles
-    for ( let i = 0; i < 18; i++ ){
-        boxTiles.innerHTML += '<a href="#"><div id="tile-image" class="p-3 bd-highlight tile"></div></a>';
-    };
+  //Create Tiles
+  for (let i = 0; i < 18; i++) {
+    boxTiles.innerHTML += '<a href="#"><div id="tile-image" class="p-3 bd-highlight tile"></div></a>';
+  }
 }
 
-window.onload = tileBox();
+tileBox();
 
-$(document).ready(function(){
+function toggleNav() {
+  let toggleNavStatus = false;
+  let menuButton = document.getElementById("menu-button");
+  let menuList = document.getElementById("menu-list");
 
-    $('#menu-button').click(function (event) {
-        $('#menu-button').toggleClass('active');
-        $('#menu-list').toggleClass('open');
-        $('#filterSlide').toggleClass('slide');
-        event.stopPropagation();
-    });
+  menuButton.addEventListener("click", function () {
+    menuList.classList.toggle("open");
+    menuButton.classList.toggle("active");
+  });
 
-    $('#filterSlide').click(function (event) {
-        $('#filterSlide').toggleClass('slide');
-        event.stopPropagation();
-    });
-});
+  window.addEventListener("mouseup", function (event) {
+    if (event.target != menuList && event.target.parentNode != menuList && event.target != menuButton && event.target.parentNode != menuButton) {
+      menuList.classList.remove("open");
+      menuButton.classList.remove("active");
+    }
+  });
+}
+
+toggleNav();
