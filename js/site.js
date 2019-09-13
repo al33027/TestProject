@@ -1,6 +1,6 @@
 //mix-mosaic
 
-function tileBox() {
+(function tileBox() {
   let boxTiles = document.getElementById("box-tiles"),
     tileImage = document.getElementById("tile-image");
 
@@ -8,11 +8,9 @@ function tileBox() {
   for (let i = 0; i < 18; i++) {
     boxTiles.innerHTML += '<a href="#"><div id="tile-image" class="p-3 bd-highlight tile"></div></a>';
   }
-}
+})();
 
-tileBox();
-
-function toggleNav() {
+(function toggleNav() {
   let toggleNavStatus = false;
   let menuButton = document.getElementById("menu-button");
   let menuList = document.getElementById("menu-list");
@@ -28,6 +26,4 @@ function toggleNav() {
       menuButton.classList.remove("active");
     }
   });
-}
-
-toggleNav();
+})();
